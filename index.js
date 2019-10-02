@@ -8,6 +8,7 @@ const app = express();
 mongoose.connect(process.env.DB_HOST, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
+    useFindAndModify: false
     }).then(() => console.log('DB Connected!'))
     .catch(err => console.log(`DB Connection Error: ${err.message}`));
 
